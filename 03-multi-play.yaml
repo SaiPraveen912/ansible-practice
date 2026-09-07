@@ -10,4 +10,4 @@
   tasks:
   - name: PLAY-2 and TASK-2
     ansible.builtin.debug: # debug module is just like echo it will print the message that we give
-        msg: "Hello I am from PLAY-2 and TASK-2"
+      msg: "Hello I am from PLAY-2 and TASK-2"
