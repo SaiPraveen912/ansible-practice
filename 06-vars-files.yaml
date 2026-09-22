@@ -1,0 +1,8 @@
+- name: variables from files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print information using variables
+    ansible.builtin.debug: # This Task is not overriding any variable
+      msg: "Hi, we are learning {{Course}} from trainer {{Trainer}}, Duration is {{Duration}}"    
