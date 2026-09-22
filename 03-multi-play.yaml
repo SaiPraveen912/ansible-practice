@@ -1,6 +1,6 @@
 - name: PLAY-1
-  hosts: localhost
-  tasks: 
+  hosts: localhost # the one where ansible is installed or master
+  tasks:
   - name: PLAY-1 and TASK-1
     ansible.builtin.debug:
       msg: "Hello I am from PLAY-1 and TASK-1"
@@ -8,6 +8,6 @@
 - name: PLAY-2
   hosts: localhost
   tasks:
-  - name: PLAY-2 and TASK-2
-    ansible.builtin.debug: # debug module is just like echo it will print the message that we give
-      msg: "Hello I am from PLAY-2 and TASK-2"
+  - name: PLAY-2 and TASk-2
+    ansible.builtin.debug:
+      msg: "Hello I am from PLAy-2 and TASK-2"
