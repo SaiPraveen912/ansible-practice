@@ -3,7 +3,7 @@
   vars:
     Course: "Ansible"
     Trainer: "Sai Praveen"
-    Duration: "120hrs"
+    Duration: "15hrs"
   tasks:
   - name: print information
     ansible.builtin.debug:
