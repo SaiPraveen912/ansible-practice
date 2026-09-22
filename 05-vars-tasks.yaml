@@ -1,16 +1,16 @@
 - name: variables
   hosts: localhost
-  vars: # play level variable declaration
+  vars:   # Play level variable declaration
     Course: "Terraform"
-    Trainer: "Siva"
-    Duration: "130hrs"
+    Trainer: "Sai Praveen"
+    Duration: "15hrs"
   tasks:
   - name: print override information
-    vars: # Task level variables overriding variables
+    vars:   # Task level variable declaration --> Overriding 
       Course: "DevOps"
     ansible.builtin.debug:
-      msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+      msg: "Hi, we are learning {{Course}} from trainer {{Trainer}}, Duration is {{Duration}}"
 
-  - name: print information
-    ansible.builtin.debug:
-      msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."    
+  - name: print information using variables
+    ansible.builtin.debug: # This Task is not overriding any variable
+      msg: "Hi, we are learning {{Course}} from trainer {{Trainer}}, Duration is {{Duration}}"    
