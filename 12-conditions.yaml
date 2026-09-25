@@ -11,6 +11,10 @@
     ansible.builtin.debug:
       msg: "User info: {{USER}}"
 
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 # if USER expense exists it give 0 if not it gives other numbers
+
   - name: say Hello
     ansible.builtin.debug:
       msg: "Hello"
